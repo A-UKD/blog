@@ -1,0 +1,104 @@
+.creator {
+    height: 42px  ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 10px;
+    list-style-type: none;
+    & li {
+        display: flex;
+        align-items: center;
+        height: 25px;
+    }
+    & li:last-child::before {
+        content: '\2022';
+        display: flex;
+        align-items: center;
+        height: 25px;
+        margin-right: 10px;
+        color: $titleColor;
+        opacity: 0.7;
+    }
+    &_pop-post {
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 1.61;
+        color: $mainTextColor;
+        & li:last-child::before {
+            content: '';
+            height: 0;
+            margin-right: 0;
+            opacity: 0;
+        }
+    }
+    &__link {
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 1.5;
+        color: $titleColor;
+        text-decoration: none;
+        opacity: 0.7;
+        transition: all .3s ease;
+        &_main {
+            font-size: 16px;
+        }
+        &_img {
+            display: flex;
+            width: 42px;
+            height: 42px;
+            border-radius: 100%;
+            overflow: hidden;
+            object-fit: fill;
+            // align-items: center;
+            transition: all .1s ease;
+            &:hover {
+                opacity: 0.7;
+                transition: all .1s ease;
+            }
+        }
+        &_pop-post {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 1.61;
+            color: $mainTextColor;
+            transition: all .3s ease-in-out;
+            &:hover {
+                color: $postLinksColor;
+                transition: all .3s ease-in-out;
+            }
+        }
+        &:hover {
+            opacity: 1;
+            transition: all .3s ease;
+        }
+    }
+    &__img {
+        display: block;
+        width: 100%;
+    }
+    &__data {
+        margin: 0;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.5;
+        color: $titleColor;
+        text-transform: capitalize;
+        opacity: 0.7;
+        cursor: default;
+        &_main {
+            font-weight: 500;
+            font-size: 16px;
+        }
+        &_pop-post {
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 1.61;
+            color: $mainTextColor;
+        }
+        &_article {
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: $mainTextColor;
+        }
+    }
+}

@@ -1,0 +1,107 @@
+.category {
+    position: relative;
+    display: block;
+    width: max-content;
+    padding: 0 10px 0 30px;
+    border: 1px solid;
+    border-left: none;
+    border-image: linear-gradient(to left, #ffffff, transparent) 1;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2.05;
+    letter-spacing: 2px;
+    color: $titleColor;
+    opacity: 0.75;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+
+    &_main {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    &_article {
+        border: none;
+        background-color: $mainTextColor;
+        color: $titleColor;
+        opacity: 0.99;
+        font-size: 15px;
+    }
+
+    &_articles {
+        display: inline;
+    }
+
+    &_development {
+        &::before{
+            background-color: rgb(60, 104, 206);
+        }
+    }
+
+    &_administration {
+        &::before{
+            background-color: rgb(174, 24, 46);
+        }
+    }
+
+    &_design {
+        &::before{
+            z-index: 6;
+            background-color: rgb(155, 13, 155);
+        }
+    }
+
+    &_management {
+        &::before{
+            background-color: rgb(96, 163, 8);
+        }
+    }
+
+    &_marketing {
+        &::before{
+            background-color: rgb(182, 30, 167);
+        }
+    }
+
+    &_popular_science {
+        &::before{
+            background-color: rgb(46, 169, 169);
+        }
+    }
+
+    &_null {
+        &::before{
+            background-color: rgb(199, 199, 202);
+        }
+    }
+
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 25px;
+        bottom: 0;
+        transform: translateX(-100%);
+        transition: all .3s ease-in-out;
+        z-index: -1;
+    }
+
+    &:hover {
+        overflow: hidden;
+        padding: 0 10px 0 20px;
+        opacity: 1;
+        background-color: transparent;
+        transition: all .3s ease-in-out;
+
+        &:before {
+            left: 0px;
+            transform: translateX(0);
+            transition: all .2s ease-in-out;
+        }
+    }
+}

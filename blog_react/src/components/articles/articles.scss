@@ -1,0 +1,42 @@
+.articlesCarusel {
+    padding: 100px 0;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        row-gap: 30px;
+    }
+}
+
+.item {
+    max-width: 360px;
+    max-height: max-content;
+    padding: 20px;
+    &__img {
+        width: 100%;
+        height: auto;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__wrapper {
+        padding: 30px 25px;
+    }
+    &__text {
+        max-height: 210px;
+        margin-bottom: 20px;
+        font-weight: 400;
+        font-size: 15.5px;
+        line-height: 1.9;
+        overflow: hidden;
+    }
+}
+
+.article__tagsbox {
+    display: flex;
+    gap: 10px;
+}
+

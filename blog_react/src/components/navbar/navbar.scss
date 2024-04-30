@@ -1,0 +1,163 @@
+@import '../../style/variables';
+
+.navbar {
+    padding: 60px 0 12px;
+    background: transparent;
+    z-index: 20;
+    &__panel {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__divider {
+        margin: 15px 0 0;
+        padding: 0 0 15px;
+    }
+    &__menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 55px;
+    }
+}
+
+.search{
+    position: relative;
+    height: 37px;
+    width: 37px;
+    transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    &_active {
+        width: 250px;
+    }
+    &__input {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background-color: #FFFFFF;
+        border: none;
+        border-radius: 40px;
+        color: $navigationColor;
+        outline: none;
+        opacity: 0;
+        transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &::placeholder {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 1.3px;
+        }
+        &_active {
+            padding: 3.5px 40px 3.5px 17px;
+            opacity: 1;
+        }
+    }
+    &_btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 41px;
+        height: 41px;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        border-radius: 40px;
+        background-color: $navigationColor;
+        z-index: 1;
+        cursor: pointer;
+        transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &_active {
+            width: 30.5px;
+            height: 30.5px;
+            top: 50%;
+            right: 5px;
+            fill: $navigationColor;
+            background-color: $navigationColor;
+            transform: translateY(-50%) rotate(360deg);
+            img {
+                width: 18px !important; 
+            }
+        }
+        img {
+            display: block;
+            width: 24px;
+        }
+    }
+    &__cancel_btn {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        cursor: pointer;
+        transition: all .5s .2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        &_active {
+            right: -30px;
+            transform: translateY(-50%) rotate(360deg);
+        }
+        img {
+            display: block;
+            width: 16px;
+        }
+    }
+    &__text {
+        display: flex;
+        align-items: center;
+        column-gap: 7px;
+        width: max-content;
+        background-color: transparent;
+        border: none;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 1.5px;
+        color: $titleColor;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    &__link {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        font-family: 'Cinzel Decorative', sans-serif;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.3;
+        text-decoration: none;
+        text-transform: lowercase;
+        color: $titleColor;
+        span {
+            font-size: 20px;
+        }
+    }
+    &__img {
+        display: block;
+        width: 100px;
+    }
+}
+
+.sign-up,
+.sign-in {
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $titleColor;
+    &:hover {
+        opacity: 0.6;
+        transition: all .3s ease;
+    }
+}
+
+.sign-up {
+    margin-left: 10px;
+    padding: 6px;
+    border: 1px solid $titleColor;
+    border-radius: 4px;
+}

@@ -1,0 +1,91 @@
+@import '../../style/variables.scss';
+
+
+
+.bloging {
+    padding: 100px 0;
+
+    &__descr {
+        margin: 0 auto 60px;
+        max-width: 1000px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 2.2;
+        text-align: center;
+    }
+}
+
+.editor__title {
+    width: 91%;
+    padding: 20px;
+    font-size: 18px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.editor__content {
+    text-align: left;
+    vertical-align: top;
+    width: 91%;
+    min-height: 500px;
+    padding: 20px;
+    font-size: 18px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.editor__tag {
+    padding: 10px;
+    border: 1px solid $navigationColor;
+    border-radius: 4px 0 0 4px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.tags__info {
+    margin-top: 15px;
+    font-weight: 500;
+    font-size: 17.5px;
+}
+
+.add-tag__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tags__container {
+    width: 500px;
+    flex-wrap: wrap;
+    display: flex;
+    gap: 10px;
+}
+
+.select_category {
+    margin: 0 0 45px;
+}
+
+select {
+    padding: 8px 16px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+label {
+    margin-right: 10px;
+    font-weight: 500;
+    font-size: 17.5px;
+}
+
+option {
+    font-size: 16px;
+}

@@ -1,0 +1,24 @@
+.divider {
+    border: none;
+    border-top: 1px solid $decorColor;
+
+    &_footer {
+        width: 120px;
+        border-color: $titleColor;
+        opacity: 0.1;
+    }
+
+    &_sign {
+        border-color: $titleColor;
+        margin: 0;
+    }
+
+    &_profile {
+        margin: 0;
+    }
+
+    &_tegs {
+        width: 20px;
+        margin: 0 20px;
+    }
+}

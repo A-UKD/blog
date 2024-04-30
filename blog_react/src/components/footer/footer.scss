@@ -1,0 +1,37 @@
+@import '../../style/variables';
+
+.footer {
+    padding: 102px 0 60px;
+    background-color: $navigationColor;
+    &__wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__nav {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 40px;
+        &__content {
+            width: 160px;
+        }
+    }
+    &__contact {
+        width: 550px;
+        &__descr {
+            margin-bottom: 30px;
+            font-weight: 400;
+            color: $titleColor;
+            opacity: 0.6;
+        }
+    }
+    &__divider {
+        margin: 42px 0 18px;
+    }
+    &__copy {
+        margin-top: 70px;
+        font-weight: 400;
+        text-align: center;
+        color: $titleColor;
+        opacity: 0.4;
+    }
+}

@@ -1,0 +1,17 @@
+.categories {
+    padding: 100px 0;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 150px;
+    }
+    &__text {
+        width: 50%;
+        margin-right: 100px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 2.2;
+        text-align: center;
+    }
+}

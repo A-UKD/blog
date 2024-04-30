@@ -1,0 +1,52 @@
+@import '../../style/variables.scss';
+
+.sign {
+    position: relative;
+    background: url('../../resources/img/header/hero-bg.jpg') center center/cover no-repeat;
+    padding: 100px 0;
+    height: 100%;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.75);
+    }
+
+    &__wrapper {
+        box-shadow: 0 0 2px 2px $titleColor;
+        padding: 35px 30px;
+        margin: 80px auto 40px;
+        height: auto;
+        width: 500px;
+    }
+
+    &__nav {
+        position: absolute;
+        bottom: -170px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 50px 0;
+    }
+}
+
+.sign__logo {
+    position: absolute;
+    top: -150px;
+}
+
+.log-in {
+    margin-bottom: 40px;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1.2px;
+    color: $titleColor;
+    text-align: center;
+
+    a {
+        color: $titleColor;
+        text-transform: capitalize;
+    }
+}
